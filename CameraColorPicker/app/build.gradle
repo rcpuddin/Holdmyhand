@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "fr.tvbarthel.apps.cameracolorpicker"
+        minSdkVersion 14
+        targetSdkVersion 22
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        googleplay {
+            versionCode 6
+            versionName "gp-0.0.6"
+        }
+
+        foss {
+            versionCode 6
+            versionName "foss-0.0.6"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.melnykov:floatingactionbutton:1.1.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.jpardogo.materialtabstrip:library:1.0.9'
+}
