@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/activity_color_picker_preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_color_picker_bottom_bar"
+        tools:background="#808080">
+
+
+        <View
+            android:id="@+id/activity_color_picker_pointer_ring"
+            android:layout_width="@dimen/activity_color_picker_pointer_ring_size"
+            android:layout_height="@dimen/activity_color_picker_pointer_ring_size"
+            android:layout_gravity="center"
+            android:background="@drawable/pointer_ring"/>
+
+        <View
+            android:id="@+id/activity_color_picker_pointer_ring_right"
+            android:layout_width="@dimen/activity_color_picker_pointer_ring_size"
+            android:layout_height="@dimen/activity_color_picker_pointer_ring_size"
+            android:layout_gravity="center"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/pointer_ring_right"/>
+
+        <View
+            android:id="@+id/activity_color_picker_pointer_ring_left"
+            android:layout_width="@dimen/activity_color_picker_pointer_ring_size"
+            android:layout_height="@dimen/activity_color_picker_pointer_ring_size"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/pointer_ring_left"/>
+
+        <View
+            android:id="@+id/activity_main_pointer"
+            android:layout_width="@dimen/activity_color_picker_pointer_size"
+            android:layout_height="@dimen/activity_color_picker_pointer_size"
+            android:layout_gravity="center"
+            android:background="@drawable/pointer" />
+        <View
+            android:id="@+id/activity_main_pointer_left"
+            android:layout_width="@dimen/activity_color_picker_pointer_size"
+            android:layout_height="@dimen/activity_color_picker_pointer_size"
+            android:layout_gravity="center"
+            android:background="@drawable/pointer" />
+        <View
+            android:id="@+id/activity_main_pointer_right"
+            android:layout_width="@dimen/activity_color_picker_pointer_size"
+            android:layout_height="@dimen/activity_color_picker_pointer_size"
+            android:layout_gravity="center"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/pointer" />
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_color_picker_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/activity_color_picker_color_preview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/oval_white" />
+
+        <TextView
+            android:id="@+id/activity_color_picker_color_preview_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/activity_color_picker_color_preview"
+            android:layout_toRightOf="@+id/activity_color_picker_color_preview"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/abc_primary_text_material_light"
+            tools:text="#FF4455" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/activity_color_picker_animated_preview"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/oval_white"
+        android:visibility="invisible" />
+
+</RelativeLayout>
